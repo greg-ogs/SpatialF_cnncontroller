@@ -6,9 +6,7 @@ This project focuses on developing an advanced system for **pinhole laser alignm
 applications such as **interferometry** and **holography**, which demand high precision and stability. The system combines 
 **machine learning** and **control theory** approaches to significantly reduce alignment times while ensuring fine-tuned 
 accuracy. A **Convolutional Neural Network (CNN)** is used for **coarse adjustments** by analyzing real-time image data 
-from connected cameras and making quick, general adjustments to the laser alignment in the X-Y-Z plane. This is 
-supplemented by a traditional **PID (Proportional-Integral-Derivative) controller**, which performs **fine adjustments** 
-to optimize the alignment further.
+from connected cameras and making quick, general adjustments to the laser alignment in the X-Y-Z plane.
 
 # Understanding CNN (Convolutional Neural Network) for Optical Alignments
 A **Convolutional Neural Network (CNN)** is a class of deep learning models widely used for recognizing patterns in data,
@@ -31,13 +29,11 @@ These layers process the extracted features and perform classification or regres
 
 In this project, CNN has been trained to interpret camera-captured images and predict X-Y axis displacement movements for fast alignment of optical components.
 ## Role of CNN in the Project
-The CNN controller is used for **general and fast alignment** during the laser alignment process, complementing the fine control offered by the PID controller. Here's how it contributes:
+The CNN controller is used for **general and fast alignment** during the laser alignment process. Here's how it contributes:
 1. **Image-based Predictions:**
 Real-time images of the optical system are fed to the CNN, which processes them to understand the current state of alignment.
 2. **Fast, Coarse Adjustment:**
 Based on its analysis, the CNN provides predictions to adjust the optical components in the X-Y axes, handling large deviations quickly.
-3. **Integrated Architecture:**
-The CNN predictions are further refined by the PID controller in the next step, ensuring precise alignment.
 
 ### Functional Benefits of CNN
 CNN is particularly well-suited for this application because of its ability to:
